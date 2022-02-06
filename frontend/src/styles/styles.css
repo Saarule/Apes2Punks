@@ -1,0 +1,245 @@
+:root {
+  --button-bg: #2fc422;
+  --button-active-bg: #681d9b;
+  --small-button-bg: #919191;
+  --small-button-active-bg: #646464;
+  --button-text: #ffffff;
+  --card: #ffffff;
+  --accountText: #ffffff;
+  --statusText: #470068;
+  --bg-gradient_1: #0c6e9b;
+  --bg-gradient_2: rgb(182, 26, 39);
+  --gradient_1: rgb(9, 49, 102);
+  --gradient_2: rgb(85, 6, 74);
+  --gradient_3: rgb(80, 63, 8);
+  --success: #106823;
+  --warning: #ca5824;
+  --error: #ca2f24;
+}
+
+* {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+html,
+body {
+  /* padding: 0;
+  margin: 0;
+  background: linear-gradient(
+      var(--bg-gradient_1) 0%,
+      var(--bg-gradient_2) 100%
+    )
+    fixed; */
+    /* background: linear-gradient(-45deg, #ee525a, #e73cde, #3111e4, #1321dd); */
+
+
+    /* background: linear-gradient(-45deg, #580206, #5c035750, #0e024d, #04265a);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh; */
+
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom right,  
+      #9fcfff, #fdafab, 
+      #ffc49f, #ffe3b0, 
+      #a5ffcd, #b3eeff, 
+      #c2b1ff, #ffcfca);
+    background-repeat: no-repeat;
+    background-size: 1000% 1000%;
+    animation: gradient 120s ease infinite;
+    
+    
+}
+/* @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+    
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  50%{background-position:100% 100%}
+  100%{background-position:0% 0%}
+}
+
+.colorGradient {
+  background: linear-gradient(
+      to bottom,
+      var(--gradient_1) 0%,
+      var(--gradient_2) 65%,
+      var(--gradient_3) 100%
+    )
+    fixed;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--card);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  width: 300px;
+  transition: 0.3s;
+  margin: 30px;
+  margin-top: 100px;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card_header {
+  height: 250px;
+  width: 300px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+}
+
+.card_header_image {
+  position: absolute;
+  width: 100%;
+}
+
+.card_body {
+  padding: 15px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_body_view_contract {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.card_footer {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spin {
+  animation: item-spin infinite 20s linear;
+}
+
+.statusText {
+  color: var(--statusText);
+  font-weight: normal;
+  text-align: center;
+}
+
+.accountText {
+  color: var(--accountText);
+  font-weight: bold;
+}
+
+.ns {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+._90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(-90deg);
+}
+
+.button {
+  display: inline-block;
+  padding: 7px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-bottom: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.button:active {
+  background-color: var(--button-active-bg);
+}
+
+.small_button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: var(--button-text);
+  background-color: var(--small-button-bg);
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 2px;
+}
+
+.small_button:disabled {
+  opacity: 0.5;
+}
+
+.small_button:active {
+  background-color: var(--small-button-active-bg);
+}
+
+@keyframes item-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
